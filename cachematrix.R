@@ -1,6 +1,6 @@
-## We first create a function which takes the matrix, stores it,
+## We first create a function (makeCacheMatrix) which takes the matrix, stores it,
 ## check for it's inverse, gets that value.
-## The second function does the background work of finding and
+## The second function (cacheSolve) does the background work of finding and
 ## keeping the inverse in cache.
 
 ## This is the main function which creates
@@ -20,7 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-## This function creates the inverse of the matrix if its not there.
+## This function creates the inverse of the matrix if its not there by
+## calling the functions like getinverse, etc.
 
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
